@@ -1,0 +1,27 @@
+.leftContainer {
+    display: grid;
+}
+.left-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+    position: relative;
+}
+.left-header .left-con .possible {
+    display: block;
+    padding-bottom: 0rem;
+    font-size: 3rem;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+.left-header .left-con .possible span {
+    color: var(--color-secondary);
+}
+.left-header .left-con .aboutMe {
+    position: relative;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 175%;
+}

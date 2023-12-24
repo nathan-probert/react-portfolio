@@ -1,0 +1,7 @@
+.bothContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    -moz-column-gap: 5vw;
+    column-gap: 5vw;
+}

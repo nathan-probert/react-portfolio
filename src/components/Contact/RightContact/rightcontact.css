@@ -1,0 +1,179 @@
+.rightContainer {
+    display: block;
+}
+.right-side {
+    transform: translateX(5vh);
+    padding-left: 3rem;
+}
+.right-side .right-con {
+    text-align: center;
+}
+.right-side .resume-btn {
+    transform: translate(-10vw, 17.5vh);
+    position: relative;
+}
+.right-side .resume-btn .resbtn-con {
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.right-side .resume-btn .resbtn-con .main-btn {
+    transition: var(--transition-easeout);
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+.right-side .resume-btn .resbtn-con .main-btn .btn-text {
+    padding: 0 2rem;
+}
+.right-side .resume-btn .resbtn-con .main-btn .btn-icon {
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: var(--transition-easeout);
+}
+.right-side .resume-btn .resbtn-con .main-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: var(--transition-easeout);
+    transform: translateX(100%);
+    z-index: -1;
+}
+.right-side .resume-btn .resbtn-con .main-btn:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    transition: var(--transition-easeout);
+    transform: translateX(0);
+}
+.right-side .text-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0rem;
+    transform: translate(-10vw, 15vh);
+    position: relative;
+}
+.right-side .text-con h1 {
+    display: block;
+    padding-bottom: 0rem;
+    font-size: 3rem;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+.right-side .text-con h1 span {
+    color: var(--color-secondary);
+}
+.right-side .text-con p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.right-side .contact-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    -moz-column-gap: 2rem !important;
+    column-gap: 2rem !important;
+    justify-content: center;
+    padding-left: 0rem;
+    transform: translate(-10vw, 17.5vh);
+    position: relative;
+}
+.right-side .contact-options a {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-grey-4);
+    width: 65px !important;
+    height: 65px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: var(--box-shadow-1);
+}
+.right-side .contact-options a i {
+    font-size: 1.75rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+}
+.right-side .contact-options a:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color-secondary);
+}
+.right-side .contact-options a:hover .text {
+    visibility: visible;
+}
+.right-side .contact-options a .text {
+    position: absolute;
+    visibility: hidden;
+    top: 0%;
+    right: 50%;
+    transform: translate(50%, -100%);
+    background-color: var(--color-grey-1);
+    color: black;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.1rem;
+    white-space: nowrap;
+}
+.right-side .contact-options a .text:hover {
+    visibility: visible;
+}
+.right-side .contact-options .contactOptionI {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-grey-4);
+    width: 65px !important;
+    height: 65px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow-1);
+}
+.right-side .contact-options .contactOptionI i {
+    font-size: 1.75rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+}
+.right-side .contact-options .contactOptionI:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color-secondary);
+}
+.right-side .contact-options .contactOptionI:hover .text {
+    visibility: visible;
+}
+.right-side .contact-options .contactOptionI .text {
+    position: absolute;
+    visibility: hidden;
+    top: 0%;
+    right: 50%;
+    transform: translate(50%, -100%);
+    background-color: var(--color-grey-1);
+    color: black;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.1rem;
+    white-space: nowrap;
+}
+.right-side .contact-options .contactOptionI .text:hover {
+    visibility: visible;
+}

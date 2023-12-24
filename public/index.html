@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>    
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLight = localStorage.getItem("lightTheme");
+            if (isLight == 'true') {
+                console.log("done");
+                document.body.classList.add("light");
+            }
+        });
+  </script>
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="./assets/coca cola.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nate Portfolio"/>
+    <title>React Portfolio Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
+  </head>
+  <style type="text/css">
+  </style>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+.grid-display-board {
+    border-top: 1px solid var(--color-secondary);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 2.5rem;
+}
+.grid-display-board a .project {
+    background-color: var(--project-back-grey);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-grey-5);
+    border-radius: 5px;
+    transition: var(--transition-easeout);
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.grid-display-board a .project:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    border: 1px solid var(--color-secondary);
+    box-shadow: 1px 3px 15px var(--color-secondary);
+}
+.grid-display-board a .project .project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-secondary);
+}
+.grid-display-board a .project .project-description {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+}
+.grid-display-board a .project .project-languages {
+    display: grid;
+    padding-top: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-display-board a .project .project-languages .logo {
+    scale: 0.75;
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+}
+.grid-display-board a .project .project-languages .logo img {
+    width: 90px;
+    height: auto;
+}
+.grid-display-board a .project .project-languages .logo:hover .text {
+    visibility: visible;
+    color: var(--white);
+}
+.grid-display-board a .project .project-languages .logo .text {
+    position: absolute;
+    visibility: hidden;
+    top: 0%;
+    right: 50%;
+    transform: translate(50%, -100%);
+    color: black;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.1rem;
+    white-space: nowrap;
+}
+.grid-display-board a .project .project-languages .logo .text:hover {
+    visibility: visible;
+}

@@ -1,0 +1,49 @@
+/* overall positioning on page */
+.pageNavigator {
+    position: absolute;
+    z-index: 10;
+    top: 2%;
+    right: 50%;
+    display: flex;
+    column-gap: 1rem;
+    transform: translateX(50%);
+}
+
+/* creating outer button and hover animation */
+.option {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-grey-4);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow-1);
+}
+.option:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color-secondary);
+}
+/* Set icon colour on hover
+.option:hover .icon {
+    color: var(--color-secondary);
+}
+*/
+
+/* actual icon */
+.icon {
+    font-size: 1.5rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+}
+
+/* setting actual active btn styling */
+.active-btn {
+    background-color: var(--color-secondary) !important;
+    transition: var(--transition-easeout);
+}
+.active-btn .icon {
+    color: var(--color-white) !important;
+}

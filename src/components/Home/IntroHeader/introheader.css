@@ -1,0 +1,12 @@
+.headerContainer {
+    display: grid;
+}
+
+.initial-text {
+    text-align: center;
+    line-height: 4rem;
+    font-size: 4rem;
+}
+.initial-text .colour {
+    color: var(--color-secondary);
+}

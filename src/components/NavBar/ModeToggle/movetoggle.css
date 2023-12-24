@@ -1,0 +1,43 @@
+.toggle {
+    /* Overall positioning */
+    position: absolute;
+    z-index: 10;
+    top: 2%;
+    right: 2%;
+    margin: auto;
+    display: flex;
+
+    /* Icon's positioning */
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-grey-4);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow-1);
+}
+.toggle .icon {
+    font-size: 1.5rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+}
+.toggle:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color-secondary);
+}
+
+.toggle.light .moon {
+    display: none;
+}
+.toggle.light .sun {
+    display: grid;
+}
+.toggle .moon {
+    display: grid;
+}
+.toggle .sun {
+    display: none;
+}

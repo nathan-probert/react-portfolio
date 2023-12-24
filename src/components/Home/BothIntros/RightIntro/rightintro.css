@@ -1,0 +1,46 @@
+.right-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 3rem;
+}
+.right-header h2 {
+    text-align: center;
+}
+.right-header .logoBoard {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    padding-top: 2rem;
+}
+.right-header .logoBoard .logo {
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+}
+.right-header .logoBoard .logo img {
+    width: 90px;
+    height: auto;
+}
+.right-header .logoBoard .logo:hover .text {
+    visibility: visible;
+    color: var(--white);
+}
+.right-header .logoBoard .logo .text {
+    position: absolute;
+    visibility: hidden;
+    top: 0%;
+    right: 50%;
+    transform: translate(50%, -100%);
+    color: black;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0.1rem;
+    white-space: nowrap;
+}
+.right-header .logoBoard .logo .text:hover {
+    visibility: visible;
+}
