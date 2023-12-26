@@ -6,17 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faEnvelopeOpenText,
     faPhone,
-    faDownloads,
+    faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const linkedin = (
-    <FontAwesomeIcon icon={icon({ name: "linkedIn", style: "brands" })} />
+    <FontAwesomeIcon icon={icon({ name: "linkedIn", style: "brands" })} className="btnImg"/>
 );
 const envelope = (
     <FontAwesomeIcon icon={faEnvelopeOpenText} className="btnImg" />
 );
 const phone = <FontAwesomeIcon icon={faPhone} className="btnImg" />;
+const download = <FontAwesomeIcon icon={faDownload} className="btnImg" />;
 
 const RightContact = () => {
     return (
@@ -72,7 +73,7 @@ const RightContact = () => {
                             >
                                 <span className="btn-text">Download Resume</span>
                                 <span className="btn-icon">
-                                    <i className="fa fa-download"></i>
+                                    {download}
                                 </span>
                             </a>
                         </div>

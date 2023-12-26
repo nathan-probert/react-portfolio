@@ -107,7 +107,7 @@
     margin: auto;
     box-shadow: var(--box-shadow-1);
 }
-.right-side .contact-options a i {
+.right-side .contact-options a .btnImg {
     font-size: 1.75rem;
     color: var(--color-grey-2);
     pointer-events: none;
