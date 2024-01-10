@@ -35,8 +35,6 @@ const RightContact = () => {
                         </p>
                     </div>
                     <div className="contact-options">
-                        <div className="placeholder"></div>
-
                         <a
                             href={"mailto:nathanprobert@rogers.com"}
                             target="_blank"
@@ -44,13 +42,6 @@ const RightContact = () => {
                             <div className="contactOptionI">
                                 <div className="text">Email</div>
                                 {envelope}
-                            </div>
-                        </a>
-
-                        <a href="#">
-                            <div className="contactOptionI">
-                                <div className="text">647-871-1731</div>
-                                {phone}
                             </div>
                         </a>
 

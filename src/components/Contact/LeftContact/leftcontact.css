@@ -31,3 +31,9 @@
     border: 1px solid var(--color-secondary);
     box-shadow: 1px 3px 15px var(--color-secondary);
 }
+
+@media screen and (max-width: 575px) {
+    .left-container{
+        display: none;
+    }
+}

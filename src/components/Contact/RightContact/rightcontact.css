@@ -2,14 +2,13 @@
     display: block;
 }
 .right-side {
-    transform: translateX(5vh);
-    padding-left: 3rem;
+    transform: translateX(5vw);
 }
 .right-side .right-con {
     text-align: center;
 }
 .right-side .resume-btn {
-    transform: translate(-10vw, 17.5vh);
+    transform: translate(-10vw, 7.5vh);
     position: relative;
 }
 .right-side .resume-btn .resbtn-con {
@@ -64,7 +63,7 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 0rem;
-    transform: translate(-10vw, 15vh);
+    transform: translate(-10vw, 5vh);
     position: relative;
 }
 .right-side .text-con h1 {
@@ -86,12 +85,11 @@
 }
 .right-side .contact-options {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    -moz-column-gap: 2rem !important;
-    column-gap: 2rem !important;
+    grid-template-columns: repeat(2, .1fr);
+    column-gap: 5rem !important;
     justify-content: center;
     padding-left: 0rem;
-    transform: translate(-10vw, 17.5vh);
+    transform: translate(-10vw, 7.5vh);
     position: relative;
 }
 .right-side .contact-options a {
@@ -176,4 +174,22 @@
 }
 .right-side .contact-options .contactOptionI .text:hover {
     visibility: visible;
+}
+
+@media screen and (max-width: 575px) {
+    .right-side {
+        transform: translateX(0) !important;
+    }
+    .right-side .text-con {
+        transform: translate(0, 3vh) !important;
+    }
+    .right-side .contact-options {
+        transform: translate(0, 5vh) !important;
+    }
+    .right-side .resume-btn {
+        transform: translate(0, 5vh) !important;
+    }
+    .main-title h2 {
+        font-size: 8vw !important;
+    }
 }

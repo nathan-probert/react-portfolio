@@ -45,7 +45,6 @@
     scale: 0.75;
     position: relative;
     text-align: center;
-    font-size: 4rem;
 }
 .grid-display-board a .project .project-languages .logo img {
     width: 90px;
@@ -70,4 +69,51 @@
 }
 .grid-display-board a .project .project-languages .logo .text:hover {
     visibility: visible;
+}
+
+@media screen and (max-width: 1350px) {
+    .grid-display-board{
+        grid-template-columns:repeat(2, 1fr) !important; 
+    }
+    .sub-title h4{
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .grid-display-board {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .projectScreen {
+        padding: 1rem 0 1rem 0;
+    }
+    .main-title h2 {
+        font-size: 8vw !important;
+    }
+    .sub-title h4 {
+        font-size: 4vw !important;
+    }
+    .grid-display-board {
+        padding-bottom: 1rem;
+    }
+    .grid-display-board .project-title {
+        font-size: 1rem;
+    }
+    .grid-display-board .project-description {
+        font-size: .75rem !important;
+    }
+    .grid-display-board .project-languages {
+        padding-top: .5rem !important;
+    }
+    .grid-display-board .project-languages .text {
+        font-size: 1.25rem !important;
+    }
+    .grid-display-board .logo img {
+        height: 65px !important;
+        width: auto !important;
+    }
 }

@@ -22,12 +22,8 @@ const xmark = <FontAwesomeIcon icon={faXmark} className="btnImg" />;
 
 const getUrl = () => {
     const url = window.location.pathname;
-    console.log("here");
-    console.log(url);
     if (url === "/home") {
-        console.log("alsd");
         document.getElementById("home burger").classList.add("active-btn-burg");
-        console.log("done");
     } else if (url === "/projects") {
         document.getElementById("projects burger").classList.add("active-btn-burg");
     } else if (url === "/contact") {
@@ -59,6 +55,8 @@ const Navbar = () => {
             const con = body.getElementsByClassName('overallContainer');
             con[0].style.paddingTop = '10rem';
         } else if (url === "/projects") {
+            const con = body.getElementsByClassName('main-title');
+            con[0].style.paddingTop = '6rem';
         } else if (url === "/contact") {
         }
     };
@@ -81,6 +79,8 @@ const Navbar = () => {
             const con = body.getElementsByClassName('overallContainer');
             con[0].style.paddingTop = '4rem';
         } else if (url === "/projects") {
+            const con = body.getElementsByClassName('main-title');
+            con[0].style.paddingTop = '0';
         } else if (url === "/contact") {
         }
     };

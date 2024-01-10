@@ -6,10 +6,7 @@ const ActualProjects = () => {
     return (
         <div>
             <div className="grid-display-board">
-                <a
-                    href="https://github.com/proby-8/tims-picker"
-                    target="_blank"
-                >
+                <a href="https://github.com/proby-8/tims-picker" target="_blank">
                     <div className="project">
                         <div className="project-title">
                             Tim Horton's Hockey Challenge Picker
