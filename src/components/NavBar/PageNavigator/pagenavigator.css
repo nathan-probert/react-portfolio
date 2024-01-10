@@ -47,3 +47,9 @@
 .active-btn .icon {
     color: var(--color-white) !important;
 }
+
+@media screen and (max-width: 575px) {
+    .option {
+        display: none !important;
+    }
+}

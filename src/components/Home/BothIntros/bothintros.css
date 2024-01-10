@@ -4,4 +4,19 @@
     height: 100%;
     -moz-column-gap: 5vw;
     column-gap: 5vw;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 1450px) {
+    .bothContainer {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bothContainer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 }

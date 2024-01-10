@@ -1,5 +1,6 @@
 .leftContainer {
     display: grid;
+    padding-bottom: 1.5rem;
 }
 .left-header {
     display: flex;
@@ -24,4 +25,31 @@
     text-align: center;
     font-size: 1.75rem;
     line-height: 175%;
+}
+
+@media screen and (max-width: 1450px) {
+    .left-header {
+        padding-left: 0 !important;
+        width: 95%;
+        margin: auto;
+    }
+    .left-header .left-con .aboutMe {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .left-header .left-con .possible {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .left-header .left-con .possible {
+        font-size: 2rem;
+    }
+    .left-header .left-con .aboutMe {
+        font-size: 1.25rem;
+    }
 }

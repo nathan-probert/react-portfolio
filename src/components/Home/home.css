@@ -1,6 +1,12 @@
 .overallContainer {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 3rem;
     padding-top: 7rem;
+}
+
+@media screen and (max-width: 575px) {
+    .overallContainer {
+        padding-top: 4rem;
+    }
 }

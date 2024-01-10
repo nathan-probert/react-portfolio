@@ -33,45 +33,30 @@ const RightIntro = () => {
                             <div className="text">JavaScript</div>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                         </div>
-                        <div className="logo kotlin">
-                            <div className="text">Kotlin</div>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" />
+                        <div className="logo react">
+                            <div className="text">React</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                         </div>
-
-                        <div className="logo Wplaceholder">
-                            <i className="devicon-placeholder-plain colored"></i>
+                        <div className="logo node">
+                            <div className="text">Node</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         </div>
-                        <div className="logo placeholder">
-                            <i className="devicon-placeholder-plain colored"></i>
-                        </div>
-
-                        <div className="logo vscode">
-                            <div className="text">VS Code</div>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                        <div className="logo npm">
+                            <div className="text">NPM</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
                         </div>
                         <div className="logo git">
                             <div className="text">Git</div>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                         </div>
-                        <div className="logo androidstudio">
-                            <div className="text">Android Studio</div>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" />
+                        <div className="logo github">
+                            <div className="text">Github</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                         </div>
-
-                        <div className="logo Wplaceholder">
-                            <i className="devicon-placeholder-plain colored"></i>
+                        <div className="logo gitlab">
+                            <div className="text">Gitlab</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" />
                         </div>
-                        <div className="logo placeholder">
-                            <i className="devicon-placeholder-plain colored"></i>
-                        </div>
-
-                        <div className="logo placeholder">
-                            <i className="devicon-placeholder-plain colored"></i>
-                        </div>
-                        <div className="logo placeholder">
-                            <i className="devicon-placeholder-plain colored"></i>
-                        </div>
-
                         <div className="logo tensorflow">
                             <div className="text">TensorFlow</div>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" />
@@ -83,6 +68,28 @@ const RightIntro = () => {
                         <div className="logo numpy">
                             <div className="text">NumPy</div>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" />
+                        </div>
+                        <div className="logo gradle">
+                            <div className="text">Gradle</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain.svg" />
+                        </div>
+                        <div className="logo docker">
+                            <div className="text">Docker</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+                        </div>
+                        <div className="logo vscode">
+                            <div className="text">VS Code</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                        </div>                        
+                        {/*
+                        <div className="logo androidstudio">
+                            <div className="text">Android Studio</div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" />
+                        </div>
+                        */}                        
+          
+                        <div className="logo placeholder">
+                            <i className="devicon-placeholder-plain colored"></i>
                         </div>
                     </div>
                 </div>

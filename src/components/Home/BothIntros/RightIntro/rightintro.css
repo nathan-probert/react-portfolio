@@ -1,15 +1,20 @@
+.right-wrapper {
+    width: 80%;
+    margin: auto;
+}
 .right-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-right: 3rem;
+    padding-top: 1.5rem;
 }
 .right-header h2 {
     text-align: center;
 }
 .right-header .logoBoard {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     -moz-column-gap: 2rem;
     column-gap: 2rem;
     row-gap: 1.5rem;
@@ -23,6 +28,10 @@
 .right-header .logoBoard .logo img {
     width: 90px;
     height: auto;
+}
+.right-header .logoBoard .github img {
+    background-color: var(--color-altprimary);
+    border-radius: 25px;
 }
 .right-header .logoBoard .logo:hover .text {
     visibility: visible;
@@ -43,4 +52,25 @@
 }
 .right-header .logoBoard .logo .text:hover {
     visibility: visible;
+}
+
+@media screen and (max-width: 1450px) and (min-width: 781px) {
+    .right-header {
+        width: 80%;
+        margin: auto;
+        padding-right: 0 !important;
+        border-top: 2px solid var(--color-secondary);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .right-header {
+        width: 80%;
+        margin: auto;
+        padding-right: 0 !important;
+        border-top: 2px solid var(--color-secondary);
+    }
+    .right-header .logoBoard {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

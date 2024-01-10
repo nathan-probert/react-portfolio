@@ -10,3 +10,15 @@
 .initial-text .colour {
     color: var(--color-secondary);
 }
+
+@media screen and (max-width: 900px) {
+    .initial-text {
+        font-size: 7vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .initial-text {
+        font-size: 3rem;
+    }
+}
