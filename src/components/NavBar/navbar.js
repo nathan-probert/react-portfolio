@@ -58,6 +58,8 @@ const Navbar = () => {
             const con = body.getElementsByClassName('main-title');
             con[0].style.paddingTop = '6rem';
         } else if (url === "/contact") {
+            const con = body.getElementsByClassName('main-title');
+            con[0].style.paddingTop = '6rem';
         }
     };
 
@@ -82,6 +84,8 @@ const Navbar = () => {
             const con = body.getElementsByClassName('main-title');
             con[0].style.paddingTop = '0';
         } else if (url === "/contact") {
+            const con = body.getElementsByClassName('main-title');
+            con[0].style.paddingTop = '0';
         }
     };
 
