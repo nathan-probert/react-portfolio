@@ -14,6 +14,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/wordleClone" element={<Navigate to="/wordleClone.html" />} />
             </Routes>
             <Navbar />
 
