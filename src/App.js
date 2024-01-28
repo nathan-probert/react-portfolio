@@ -24,7 +24,7 @@ function App() {
 
 function WordleClonePage() {
     // Perform navigation to wordleclone.html
-    window.location.href = '/wordleclone.html';
+    window.location.href = '/wordleclone';
 
     // Return null since this component doesn't render anything
     return null;
