@@ -14,12 +14,20 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/wordle" element={<Navigate to="/wordleclone.html" />} />
+
+                <Route path="/wordle" element={<WordleClonePage />} />
             </Routes>
             <Navbar />
-
         </div>
     );
+}
+
+function WordleClonePage() {
+    // Perform navigation to wordleclone.html
+    window.location.href = '/wordleclone.html';
+
+    // Return null since this component doesn't render anything
+    return null;
 }
 
 export default App;
