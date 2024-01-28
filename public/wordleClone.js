@@ -28,7 +28,7 @@ function input() {
             // for clicking            
             const buttons = document.querySelectorAll("button");
             buttons.forEach(button => {
-                button.addEventListener('touchstart', event => {
+                button.addEventListener('pointerdown', event => {
                     const activeElement = document.querySelector(".active");
                     var id = activeElement.id
                     var ogid = id;
