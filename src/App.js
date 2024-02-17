@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar/navbar";
 import Home from "./components/Home/home";
 import Projects from "./components/Projects/projects";
 import Contact from "./components/Contact/contact";
+import HockeyPicks from "./components/HockeyPicks/hockeypicks";
 
 import { Navigate, Route, Routes } from "react-router-dom";
 
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/hockeypicks" element={<HockeyPicks />} />
 
                 <Route path="/wordle" element={<WordleClonePage />} />
             </Routes>
