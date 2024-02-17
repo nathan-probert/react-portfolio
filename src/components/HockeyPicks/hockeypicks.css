@@ -1,0 +1,66 @@
+/* hockeypicks.css */
+
+.container {
+    padding: 6rem 6rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.sort-arrow {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .header {
+    background-color: var(--color-primary);
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .header-text {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .body tr:nth-child(even) {
+    background-color: var(--color-grey-5);
+  }
+  
+  .body tr:hover {
+    background-color: #5f5f5f;
+  }
+  
+  td, th {
+    padding: 10px;
+    border: 1px solid var(--color-white);
+    text-align: center;
+  }
+  
+  /* Custom styling for individual columns */
+  .name {
+    font-weight: bold;
+    padding-right: 0;
+  }
+
+  .teamName {
+    color: #007bff; /* blue color */
+  }
+  
+  .bet {
+    font-style: italic;
+  }
+  
+  .stat {
+    color: #28a745; /* green color */
+  }
+  
+  
