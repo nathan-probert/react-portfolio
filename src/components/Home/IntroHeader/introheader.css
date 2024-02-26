@@ -3,13 +3,52 @@
 }
 
 .initial-text {
+    justify-self: center;
     text-align: center;
     line-height: 4rem;
     font-size: 4rem;
+    display: inline-flex;
+    column-gap: 0;
 }
+
 .initial-text .colour {
     color: var(--color-secondary);
 }
+
+.eachChar {
+    display: inline-block;
+}
+
+@keyframes jump {
+    0% {
+        transform: scale3d(1, 1, 1) !important;
+    }
+
+    20% {
+        transform: scale3d(1.4, .55, 1);
+    }
+
+    40% {
+        transform: scale3d(.75, 1.25, 1);
+    }
+
+    60% {
+        transform: scale3d(1.25, .85, 1);
+    }
+
+    80% {
+        transform: scale3d(.9, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1) !important;
+    }
+}
+
+.jump {
+    animation: jump 1s ease;
+}
+
 
 @media screen and (max-width: 900px) {
     .initial-text {
