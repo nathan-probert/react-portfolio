@@ -58,7 +58,7 @@ const RightContact = () => {
                     <div className="resume-btn">
                         <div className="resbtn-con">
                             <a
-                                href="https://drive.google.com/file/d/1iDyzd99vEPIuDAbks-rweN20qIfFZG3_/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1I2eN_uRRqezq5aA2S34SEqhTY8ro9sVK/view?usp=sharing"
                                 target="_blank"
                                 className="main-btn"
                             >

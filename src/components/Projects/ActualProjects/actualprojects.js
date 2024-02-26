@@ -9,13 +9,13 @@ const ActualProjects = () => {
                 <a href="https://github.com/proby-8/tims-picker" target="_blank">
                     <div className="project">
                         <div className="project-title">
-                            Tim Horton's Hockey Challenge Picker
+                            SmartScore - Predict NHL Goalscorers
                         </div>
                         <div className="project-description">
                             This program includes a variety of functions that
-                            together provide a way to reliably pick winning
-                            hockey challenge picks for Tim Hortons Hockey Pick
-                            Challenge using machine learning.
+                            together provide a way to reliably goal scorers for
+                            both the Tim Hortons Hockey Pick Challenge and 
+                            Draftkings bets using machine learning.
                         </div>
                         <div className="project-languages">
                             <div className="logo python">
@@ -33,6 +33,10 @@ const ActualProjects = () => {
                             <div className="logo numpy">
                                 <div className="text">NumPy</div>
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" />
+                            </div>
+                            <div className="logo flask">
+                                <div className="text">Flask</div>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" />
                             </div>
                         </div>
                     </div>
