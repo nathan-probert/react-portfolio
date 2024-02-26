@@ -11,6 +11,14 @@
     column-gap: 0;
 }
 
+.hidden {
+    display: none;
+}
+
+.col {
+    color: var(--color-secondary);
+}
+
 .initial-text .colour {
     color: var(--color-secondary);
 }
@@ -49,15 +57,22 @@
     animation: jump 1s ease;
 }
 
-
 @media screen and (max-width: 900px) {
-    .initial-text {
+    .animation {
+        display: none !important;
+    }
+    .mobile {
+        display: block !important;
         font-size: 7vw;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .initial-text {
+    .initial-text .animation {
+        display: none !important;
+    }
+    .initial-text .mobile {
+        display: block !important;
         font-size: 3rem;
     }
 }
