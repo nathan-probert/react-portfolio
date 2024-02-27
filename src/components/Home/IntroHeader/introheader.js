@@ -6,7 +6,7 @@ const IntroHeader = () => {
     return (
         <div className="headerContainer">
             <h1 className="initial-text mobile hidden">
-                Hi, I'm <span className="colour">Nathan Probert</span> <span class="wave">👋</span>
+                Hi, I'm <span className="colour">Nathan Probert</span> <span className="wave">👋</span>
             </h1>
             <h1 className='initial-text animation'>
                 {[[..."Hi,"], [..."I'm"], [..."Nathan"], [..."Probert"], [..."👋"]].map((word, i) => {
