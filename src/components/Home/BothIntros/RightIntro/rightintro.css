@@ -24,6 +24,8 @@
     position: relative;
     text-align: center;
     font-size: 4rem;
+    transition: .5s ease-in-out;
+
 }
 .right-header .logoBoard .logo img {
     width: 90px;
@@ -33,10 +35,16 @@
     background-color: var(--color-altprimary);
     border-radius: 25px;
 }
-.right-header .logoBoard .logo:hover .text {
-    visibility: visible;
-    color: var(--white);
+
+.right-header .logoBoard:hover > .logo{
+    opacity: 0.2;
 }
+
+.right-header .logoBoard .logo:hover {
+    transition: .5s ease;
+    opacity: 1 !important;
+}
+
 .right-header .logoBoard .logo .text {
     position: absolute;
     visibility: hidden;
@@ -50,8 +58,9 @@
     padding: 0.1rem;
     white-space: nowrap;
 }
-.right-header .logoBoard .logo .text:hover {
+.right-header .logoBoard .logo:hover .text {
     visibility: visible;
+    color: var(--white);
 }
 
 @media screen and (max-width: 1450px) and (min-width: 781px) {
