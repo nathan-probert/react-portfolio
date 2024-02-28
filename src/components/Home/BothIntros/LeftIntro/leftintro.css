@@ -16,7 +16,7 @@
     text-align: center;
     transition: opacity 0.5s ease-in-out;
 }
-.left-header .left-con .possible span {
+.left-header span {
     color: var(--color-secondary);
 }
 .left-header .left-con .aboutMe {

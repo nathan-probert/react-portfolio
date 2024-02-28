@@ -46,11 +46,10 @@ const LeftIntro = () => {
                         I am a <span>Computer Scientist</span> 💻.
                     </p>
                     <p className="aboutMe">
-                        I am currently completing my Bachelor of Computing
-                        degree, majoring in Computer Science Honours and
-                        minoring in Business Economics at the University of
-                        Guelph. I enjoy working with artificial intelligence,
-                        data analytics, and web design, and using these
+                        I'm studying for a Bachelor's in <span> Computer Science Honours</span>
+                        with a minor in Business Economics at the University of Guelph.
+                        I enjoy working with artificial intelligence 🤖,
+                        data analytics 🔍, and web design 🌐, in particular using these
                         technologies to create cool new projects.
                     </p>
                 </div>
