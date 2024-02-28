@@ -8,6 +8,20 @@
     padding-bottom: 3rem;
 }
 
+@media screen and (max-width: 1600px) {
+    .bothContainer {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+    .bothContainer .aboutMe {
+        font-size: 1.5rem !important;
+    }
+    .right-header .logoBoard .logo img {
+        width: 80px !important;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 1450px) {
     .bothContainer {
         grid-template-columns: repeat(1, 1fr) !important;
