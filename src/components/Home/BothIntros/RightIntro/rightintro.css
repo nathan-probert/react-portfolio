@@ -37,11 +37,12 @@
 }
 
 .right-header .logoBoard:hover > .logo{
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .right-header .logoBoard .logo:hover {
-    transition: .5s ease;
+    transition: .15s ease;
+    scale: 1.12;
     opacity: 1 !important;
 }
 
