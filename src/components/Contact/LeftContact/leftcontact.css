@@ -32,7 +32,7 @@
     box-shadow: 1px 3px 15px var(--color-secondary);
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 1200px) {
     .left-container{
         display: none;
     }

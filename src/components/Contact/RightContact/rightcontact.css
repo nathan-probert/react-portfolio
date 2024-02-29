@@ -1,5 +1,6 @@
 .rightContainer {
     display: block;
+    padding-top: 2rem;
 }
 .right-side {
     transform: translateX(5vw);
@@ -176,7 +177,7 @@
     visibility: visible;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 1200px) {
     .right-side {
         transform: translateX(0) !important;
     }
@@ -189,6 +190,9 @@
     .right-side .resume-btn {
         transform: translate(0, 5vh) !important;
     }
+}
+
+@media screen and (max-width: 575px) {
     .main-title h2 {
         font-size: 8vw !important;
     }

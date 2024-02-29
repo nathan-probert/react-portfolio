@@ -31,6 +31,10 @@
     width: 90px;
     height: auto;
 }
+.right-header .logoBoard .logo .icon {
+    width: 90px;
+    height: auto;
+}
 .right-header .logoBoard .github img {
     background-color: var(--color-altprimary);
     border-radius: 25px;
