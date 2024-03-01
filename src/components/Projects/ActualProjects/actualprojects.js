@@ -112,9 +112,65 @@ const ActualProjects = () => {
                             possible.
                         </div>
                         <div className="project-languages">
-                            <div className="logo python">
+                            <div className="logo Java">
                                 <div className="text">Java</div>
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                            </div>
+                            <div className="logo Gradle">
+                                <div className="text">Gradle</div>
+                                <img className="gradleLogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="https://github.com/proby-8/imperialCapitalist"
+                    target="_blank"
+                >
+                    <div className="project">
+                        <div className="project-title">imperial Capitalist - Idle Tycoon</div>
+                        <div className="project-description">
+                        Embark on an epic galactic journey with "Imperial Capitalist," a 
+                        thrilling Star Wars-inspired idle game! Channel your inner entrepreneur 
+                        and become the ultimate Imperial Capitalist, ruling the Star Wars universe! 
+                        May the profits be with you!
+                        </div>
+                        <div className="project-languages">
+                            <div className="logo Java">
+                                <div className="text">Java</div>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                            </div>
+                            <div className="logo Gradle">
+                                <div className="text">Gradle</div>
+                                <img className="gradleLogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="https://github.com/proby-8/mancala"
+                    target="_blank"
+                >
+                    <div className="project">
+                        <div className="project-title">Mancala</div>
+                        <div className="project-description">
+                            Enable two-player Mancala games with custom rule sets. 
+                            Utilize a custom datastructure for efficient game management. 
+                            Save/load user profiles and games seamlessly. 
+                            JUnit test cases ensure consistent gameplay
+                        </div>
+                        <div className="project-languages">
+                            <div className="logo Java">
+                                <div className="text">Java</div>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                            </div>
+                            <div className="logo Docker">
+                                <div className="text">Docker</div>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+                            </div>
+                            <div className="logo Gradle">
+                                <div className="text">Gradle</div>
+                                <img className="gradleLogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" />
                             </div>
                         </div>
                     </div>

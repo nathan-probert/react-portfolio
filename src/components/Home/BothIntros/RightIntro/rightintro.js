@@ -71,7 +71,7 @@ const RightIntro = () => {
                         </div>
                         <div className="logo gradle">
                             <div className="text">Gradle</div>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" />
+                            <img className="gradleLogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" />
                         </div>
                         <div className="logo docker">
                             <div className="text">Docker</div>

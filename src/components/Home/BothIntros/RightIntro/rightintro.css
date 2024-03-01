@@ -25,7 +25,9 @@
     text-align: center;
     font-size: 4rem;
     transition: .3s ease-in-out;
-
+}
+.gradleLogo{
+    filter: brightness(200%);
 }
 .right-header .logoBoard .logo img {
     width: 90px;

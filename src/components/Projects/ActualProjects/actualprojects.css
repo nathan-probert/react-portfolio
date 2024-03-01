@@ -46,6 +46,9 @@
     position: relative;
     text-align: center;
 }
+.gradleLogo{
+    filter: brightness(200%);
+}
 .grid-display-board a .project .project-languages .logo img {
     width: 90px;
     height: auto;
