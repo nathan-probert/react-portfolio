@@ -184,7 +184,7 @@ function App() {
         })}
         <button onClick={handleNextPage}>Next</button>
       </div>
-      <a href="/" class="backHome">
+      <a href="/projects" class="backHome">
             <div class="btn">
                 {arrowLeft}
             </div>

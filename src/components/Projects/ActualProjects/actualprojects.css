@@ -10,38 +10,87 @@
     margin-left: 3rem;
     margin-right: 2.5rem;
 }
-.grid-display-board a .project {
+
+.grid-display-board .item {
+    position: relative;
+    border-radius: 15px;
+}
+.grid-display-board .project {
     background-color: var(--project-back-grey);
     width: 100%;
     height: 100%;
     padding: 1rem;
     border: 1px solid var(--color-grey-5);
-    border-radius: 5px;
+    border-radius: 15px;
     transition: var(--transition-easeout);
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 }
-.grid-display-board a .project:hover {
-    cursor: pointer;
-    transform: translateY(-5px);
-    border: 1px solid var(--color-secondary);
-    box-shadow: 1px 3px 15px var(--color-secondary);
+.overlay img{
+    width: 90px;
+    height: auto;
+    border-radius: 20px;
+    opacity: 100% !important;
 }
-.grid-display-board a .project .project-title {
+.overlay .github{
+    background-color: var(--color-altprimary);
+}
+.grid-display-board .item .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+}
+.item:hover .overlay{
+    opacity: 1;
+    transform: scale(1);
+}
+.overlay .links {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    justify-content: center; /* Center items by default */
+  }
+  
+  .overlay .links a {
+    text-align: center; /* Center the text within each link */
+  }
+  
+  /* Change the layout to a grid when there are two or more items */
+  .overlay .links a:nth-child(2) {
+    grid-column: 2;
+  }
+.overlay h3{
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.grid-display-board .project .project-title {
     font-size: 1.25rem;
     font-weight: bold;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--color-secondary);
 }
-.grid-display-board a .project .project-description {
+.grid-display-board .project .project-description {
     padding-top: 1rem;
     font-size: 1.25rem;
 }
-.grid-display-board a .project .project-languages {
+.grid-display-board .project .project-languages {
     display: grid;
     padding-top: 1rem;
     grid-template-columns: repeat(4, 1fr);
 }
-.grid-display-board a .project .project-languages .logo {
+.grid-display-board .project .project-languages .logo {
     scale: 0.75;
     position: relative;
     text-align: center;
@@ -49,15 +98,15 @@
 .gradleLogo{
     filter: brightness(200%);
 }
-.grid-display-board a .project .project-languages .logo img {
+.grid-display-board .project .project-languages .logo img {
     width: 90px;
     height: auto;
 }
-.grid-display-board a .project .project-languages .logo:hover .text {
+.grid-display-board .project .project-languages .logo:hover .text {
     visibility: visible;
     color: var(--white);
 }
-.grid-display-board a .project .project-languages .logo .text {
+.grid-display-board .project .project-languages .logo .text {
     position: absolute;
     visibility: hidden;
     top: 0%;
@@ -70,7 +119,7 @@
     padding: 0.1rem;
     white-space: nowrap;
 }
-.grid-display-board a .project .project-languages .logo .text:hover {
+.grid-display-board .project .project-languages .logo .text:hover {
     visibility: visible;
 }
 

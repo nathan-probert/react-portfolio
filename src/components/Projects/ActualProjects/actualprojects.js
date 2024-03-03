@@ -6,7 +6,7 @@ const ActualProjects = () => {
     return (
         <div>
             <div className="grid-display-board">
-                <a href="/smartscore" target="_blank">
+                <div className="item">
                     <div className="project">
                         <div className="project-title">
                             SmartScore - Predict NHL Goalscorers
@@ -40,9 +40,20 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
+                    <div className="overlay">
+                        <h3>ScoreSmart</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                            <a className="link" href="/smartscore">
+                                <img src="assets/SmartScore.jpg" alt="Could not load image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <a href="/">
+                <div className="item">
                     <div className="project">
                         <div className="project-title">Portfolio Website</div>
                         <div className="project-description">
@@ -70,9 +81,20 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
+                    <div className="overlay">
+                        <h3>Portfolio Website</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                            <a className="link" href="/smartscore">
+                                <img src="assets/smallerLogo.png" alt="Could not load image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <a href="/wordle">
+                <div className="item">
                     <div className="project">
                         <div className="project-title">Wordle Game</div>
                         <div className="project-description">
@@ -96,12 +118,20 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
+                    <div className="overlay">
+                        <h3>Wordle Clone</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                            <a className="link" href="/wordle">
+                                <img src="assets/smallerLogo.png" alt="Could not load image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <a
-                    href="https://github.com/proby-8/wordle-solver"
-                    target="_blank"
-                >
+                <div className="item">
                     <div className="project">
                         <div className="project-title">Wordle Solving Bot</div>
                         <div className="project-description">
@@ -122,11 +152,17 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
-                <a
-                    href="https://github.com/proby-8/imperialCapitalist"
-                    target="_blank"
-                >
+                    <div className="overlay">
+                        <h3>Wordle-Solver</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="item">
                     <div className="project">
                         <div className="project-title">imperial Capitalist - Idle Tycoon</div>
                         <div className="project-description">
@@ -146,11 +182,17 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
-                <a
-                    href="https://github.com/proby-8/mancala"
-                    target="_blank"
-                >
+                    <div className="overlay">
+                        <h3>Imperial Capitalist</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="item">
                     <div className="project">
                         <div className="project-title">Mancala</div>
                         <div className="project-description">
@@ -174,14 +216,20 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
-                <a
-                    href="https://github.com/proby-8/discord-music-bot"
-                    target="_blank"
-                >
+                    <div className="overlay">
+                        <h3>Mancala</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="item">
                     <div className="project">
                         <div className="project-title">
-                            Multipurpose Discord Music Bot
+                            Multipurpose Discord Bot
                         </div>
                         <div className="project-description">
                             Program's main function is to play music in a
@@ -196,7 +244,16 @@ const ActualProjects = () => {
                             </div>
                         </div>
                     </div>
-                </a>
+                    <div className="overlay">
+                        <h3>Discord Bot</h3>
+                        <div className="links">
+                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                                <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
