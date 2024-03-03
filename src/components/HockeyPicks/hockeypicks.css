@@ -15,6 +15,38 @@
     cursor: pointer;
 }
 
+.backHome {
+  position: absolute;
+  z-index: 10;
+  top: 0.5%;
+  left: 2%;
+  margin: auto;
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.backHome .arrowLeft {
+  font-size: 1.5rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+  transform: translateY(2px);
+}
+.backHome:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--color-secondary);
+}
+
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -33,7 +65,7 @@
   }
   
   .body tr:nth-child(even) {
-    background-color: var(--color-grey-5);
+    background-color: var(--project-back-grey);
   }
   
   .body tr:hover {
@@ -53,7 +85,7 @@
   }
 
   .teamName {
-    color: #007bff; /* blue color */
+    color: #357dc9; /* blue color */
   }
   
   .bet {
@@ -61,7 +93,44 @@
   }
   
   .stat {
-    color: #28a745; /* green color */
+    color: #10812a; /* green color */
+    font-weight: bold;
   }
   
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
   
+  .pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #2077b3 !important; 
+  }
+  
+  .pagination button:hover {
+    background-color: #2077b3;
+  }
+  
+  .pagination button:last-child {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71;
+  }
+  
+  .pagination button:last-child:hover {
+    background-color: #1a9851;
+  }
+  
+  .pagination .ellipsis {
+    margin: 0 5px;
+    color: #777;
+  }

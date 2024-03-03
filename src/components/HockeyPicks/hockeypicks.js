@@ -1,15 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import './hockeypicks.css';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
+
+const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} className="arrowLeft" />;
+
 function App() {
   const [list, setList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortColumn, setSortColumn] = useState('stat');
+  const [sortColumn, setSortColumn] = useState('Stat');
   const [sortOrder, setSortOrder] = useState('desc');
   const itemsPerPage = 25;
 
+  const sortComparator = (a, b) => {
+    var aValue = a[sortColumn];
+    var bValue = b[sortColumn];
+
+    if (sortColumn === 'Bet') {
+      aValue = parseFloat(aValue);
+      bValue = parseFloat(bValue);
+    }
+
+    if (sortOrder === 'asc') {
+      return aValue > bValue ? 1 : -1;
+    } else {
+      return aValue < bValue ? 1 : -1;
+    }
+  };
+
   useEffect(() => {
-    fetch('http://localhost:5000/api/list')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:Cmz3Gtkc/export')
       .then((response) => response.json())
       .then((data) => setList(data))
       .catch((error) => console.error('Error fetching list:', error));
@@ -23,9 +46,10 @@ function App() {
     return number === 0 ? 'Away' : 'Home';
   };
 
+  const sortedList = [...list].sort(sortComparator);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = list.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = sortedList.slice(indexOfFirstItem, indexOfLastItem);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -44,36 +68,30 @@ function App() {
     setSortColumn(column);
   };
 
-  const sortComparator = (a, b) => {
-    const aValue = a[sortColumn];
-    const bValue = b[sortColumn];
-
-    if (sortOrder === 'asc') {
-      return aValue > bValue ? 1 : -1;
-    } else {
-      return aValue < bValue ? 1 : -1;
-    }
-  };
-
   const sortedItems = currentItems.slice().sort(sortComparator);
 
   const renderTableRows = () => {
-    return sortedItems.map((item) => (
-      <tr key={item.name}>
-        <td className='name'>{item.name}</td>
-        <td className='teamName'>{item.team_name}</td>
-        <td className='bet'>{item.bet}</td>
-        <td className='stat'>{round(item.stat, 2)}</td>
-        <td className='gpg'>{round(item.goals_per_game, 2)}</td>
-        <td className='5gpg'>{round(item.five_gpg, 2)}</td>
-        <td className='hgpg'>{round(item.historic_gpg, 2)}</td>
-        <td className='ppg'>{round(item.ppg, 2)}</td>
-        <td className='otpm'>{round(item.otpm, 2)}</td>
-        <td className='tgpg'>{round(item.team_goals_per_game, 2)}</td>
-        <td className='otga'>{round(item.other_team_goals_against, 2)}</td>
-        <td className='isHome'>{booleanConvert(item.is_home)}</td>
-      </tr>
-    ));
+    return sortedItems.map((item, index) => {
+      const placement = indexOfFirstItem + index + 1; // Calculate the placement
+  
+      return (
+        <tr key={item.Name}>
+          <td className='placement'>{placement}</td>
+          <td className='name'>{item.Name}</td>
+          <td className='teamName'>{item.Team.replace(/�/g, "é")}</td>
+          <td className='stat'>{round(item.Stat, 3)}</td>
+          <td className='bet'>{parseInt(item.Bet)}</td>
+          <td className='gpg'>{round(item.GPG, 2)}</td>
+          <td className='5gpg'>{round(item.Last_5_GPG, 2)}</td>
+          <td className='hgpg'>{round(item.HGPG, 2)}</td>
+          <td className='ppg'>{round(item.PPG, 2)}</td>
+          <td className='otpm'>{round(item.OTPM, 2)}</td>
+          <td className='tgpg'>{round(item.TGPG, 2)}</td>
+          <td className='otga'>{round(item.OTGA, 2)}</td>
+          <td className='isHome'>{booleanConvert(item.Home_1)}</td>
+        </tr>
+      );
+    });
   };
 
   const pageNumbers = Array.from({ length: Math.ceil(list.length / itemsPerPage) }, (_, index) => index + 1);
@@ -91,41 +109,42 @@ function App() {
       <table className='table'>
         <thead className='header'>
           <tr>
-            <th onClick={() => handleSort('name')}>
-              <span className='header-text'>Player Name</span> {renderSortArrow('name')}
+            <span className='header-text'></span>
+            <th onClick={() => handleSort('Name')}>
+              <span className='header-text'>Player Name</span> {renderSortArrow('Name')}
             </th>
-            <th onClick={() => handleSort('team_name')}>
-              <span className='header-text'>Team Name</span> {renderSortArrow('team_name')}
+            <th onClick={() => handleSort('Team')}>
+              <span className='header-text'>Team Name</span> {renderSortArrow('Team')}
             </th>
-            <th onClick={() => handleSort('bet')}>
-              <span className='header-text'>Bet</span> {renderSortArrow('bet')}
+            <th onClick={() => handleSort('Stat')}>
+              <span className='header-text'>Probablity</span> {renderSortArrow('Stat')}
             </th>
-            <th onClick={() => handleSort('stat')}>
-              <span className='header-text'>Stat</span> {renderSortArrow('stat')}
+            <th onClick={() => handleSort('Bet')}>
+              <span className='header-text'>Bet</span> {renderSortArrow('Bet')}
             </th>
-            <th onClick={() => handleSort('goals_per_game')}>
-              <span className='header-text'>GPG</span> {renderSortArrow('goals_per_game')}
+            <th onClick={() => handleSort('GPG')}>
+              <span className='header-text'>GPG</span> {renderSortArrow('GPG')}
             </th>
-            <th onClick={() => handleSort('five_gpg')}>
-              <span className='header-text'>5GPG</span> {renderSortArrow('five_gpg')}
+            <th onClick={() => handleSort('5GPG')}>
+              <span className='header-text'>5GPG</span> {renderSortArrow('5GPG')}
             </th>
-            <th onClick={() => handleSort('historic_gpg')}>
-              <span className='header-text'>HGPG</span> {renderSortArrow('historic_gpg')}
+            <th onClick={() => handleSort('HGPG')}>
+              <span className='header-text'>HGPG</span> {renderSortArrow('HGPG')}
             </th>
-            <th onClick={() => handleSort('ppg')}>
-              <span className='header-text'>HPPG</span> {renderSortArrow('ppg')}
+            <th onClick={() => handleSort('PPG')}>
+              <span className='header-text'>HPPG</span> {renderSortArrow('PPG')}
             </th>
-            <th onClick={() => handleSort('otpm')}>
-              <span className='header-text'>OTPM</span> {renderSortArrow('otpm')}
+            <th onClick={() => handleSort('OTPM')}>
+              <span className='header-text'>OTPM</span> {renderSortArrow('OTPM')}
             </th>
-            <th onClick={() => handleSort('team_goals_per_game')}>
-              <span className='header-text'>TGPG</span> {renderSortArrow('team_goals_per_game')}
+            <th onClick={() => handleSort('TGPG')}>
+              <span className='header-text'>TGPG</span> {renderSortArrow('TGPG')}
             </th>
-            <th onClick={() => handleSort('other_team_goals_against')}>
-              <span className='header-text'>OTGA</span> {renderSortArrow('other_team_goals_against')}
+            <th onClick={() => handleSort('OTGA')}>
+              <span className='header-text'>OTGA</span> {renderSortArrow('OTGA')}
             </th>
-            <th onClick={() => handleSort('is_home')}>
-              <span className='header-text'>Location</span> {renderSortArrow('is_home')}
+            <th onClick={() => handleSort('Home_1')}>
+              <span className='header-text'>Location</span> {renderSortArrow('Home_1')}
             </th>
           </tr>
         </thead>
@@ -133,13 +152,35 @@ function App() {
       </table>
 
       <div className='pagination'>
-        {pageNumbers.map((number) => (
-          <button key={number} onClick={() => handlePageChange(number)}>
-            {number}
-          </button>
-        ))}
+        {pageNumbers.map((number, index) => {
+          if (index===currentPage-1) {
+            return (
+              <button className='active' key={number} onClick={() => handlePageChange(number)}>
+                {number}
+              </button>
+            );
+          } else if (index === 0 || index === pageNumbers.length - 1 || (index >= currentPage - 3 && index <= currentPage + 1)) {
+            return (
+              <button key={number} onClick={() => handlePageChange(number)}>
+                {number}
+              </button>
+            );
+          } else if (index === currentPage + 3 || index === currentPage - 4) {
+            return (
+              <span key={index} className='ellipsis'>
+                ...
+              </span>
+            );
+          }
+          return null;
+        })}
         <button onClick={handleNextPage}>Next</button>
       </div>
+      <a href="https://www.nathanprobert.ca" class="backHome">
+            <div class="btn">
+                {arrowLeft}
+            </div>
+      </a>
     </div>
   );
 
