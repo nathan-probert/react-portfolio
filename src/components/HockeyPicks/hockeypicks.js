@@ -13,6 +13,8 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortColumn, setSortColumn] = useState('Stat');
   const [sortOrder, setSortOrder] = useState('desc');
+  const [date, setDate] = useState(''); // Declare date state
+
   const itemsPerPage = 25;
 
   const sortComparator = (a, b) => {
@@ -34,8 +36,13 @@ function App() {
   useEffect(() => {
     fetch('https://x8ki-letl-twmt.n7.xano.io/api:Cmz3Gtkc/export')
       .then((response) => response.json())
-      .then((data) => setList(data))
+      .then((data) => {
+        setDate(data[0]?.Date || '');
+        setList(data);
+      })
       .catch((error) => console.error('Error fetching list:', error));
+
+      document.title = 'Nathan Probert | SmartScore';
   }, []);
 
   const round = (number, decimalPlaces) => {
@@ -105,7 +112,8 @@ function App() {
 
   return (
     <div className='container'>
-      <h1 className='title'>Probablity Leaderboard</h1>
+      <h1 className='title'>SmartScore</h1>
+      <h3 className='date'>{date}</h3>
       <table className='table'>
         <thead className='header'>
           <tr>
@@ -176,7 +184,7 @@ function App() {
         })}
         <button onClick={handleNextPage}>Next</button>
       </div>
-      <a href="https://www.nathanprobert.ca" class="backHome">
+      <a href="/" class="backHome">
             <div class="btn">
                 {arrowLeft}
             </div>

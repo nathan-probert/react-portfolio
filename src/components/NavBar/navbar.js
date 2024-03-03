@@ -26,8 +26,10 @@ const getUrl = () => {
         document.getElementById("home burger").classList.add("active-btn-burg");
     } else if (url === "/projects") {
         document.getElementById("projects burger").classList.add("active-btn-burg");
+        document.title = 'Nathan Probert | Projects';
     } else if (url === "/contact") {
         document.getElementById("contact burger").classList.add("active-btn-burg");
+        document.title = 'Nathan Probert | Contact';
     }
 };
 
@@ -57,9 +59,11 @@ const Navbar = () => {
         } else if (url === "/projects") {
             const con = body.getElementsByClassName('main-title');
             con[0].style.paddingTop = '6rem';
+            document.title = 'Nathan Probert | Projects';
         } else if (url === "/contact") {
             const con = body.getElementsByClassName('main-title');
             con[0].style.paddingTop = '6rem';
+            document.title = 'Nathan Probert | Contact';
         }
     };
 
@@ -83,10 +87,13 @@ const Navbar = () => {
         } else if (url === "/projects") {
             const con = body.getElementsByClassName('main-title');
             con[0].style.paddingTop = '0';
+            document.title = 'Nathan Probert | Projects';
         } else if (url === "/contact") {
             const con = body.getElementsByClassName('main-title');
             con[0].style.paddingTop = '0';
+            document.title = 'Nathan Probert | Contact';
         }
+
     };
 
     return (

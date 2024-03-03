@@ -6,7 +6,7 @@ const ActualProjects = () => {
     return (
         <div>
             <div className="grid-display-board">
-                <a href="https://github.com/proby-8/tims-picker" target="_blank">
+                <a href="/smartscore" target="_blank">
                     <div className="project">
                         <div className="project-title">
                             SmartScore - Predict NHL Goalscorers
@@ -42,7 +42,7 @@ const ActualProjects = () => {
                     </div>
                 </a>
 
-                <a href="https://www.nathanprobert.ca">
+                <a href="/">
                     <div className="project">
                         <div className="project-title">Portfolio Website</div>
                         <div className="project-description">
@@ -72,7 +72,7 @@ const ActualProjects = () => {
                     </div>
                 </a>
 
-                <a href="https://www.nathanprobert.ca/wordle">
+                <a href="/wordle">
                     <div className="project">
                         <div className="project-title">Wordle Game</div>
                         <div className="project-description">

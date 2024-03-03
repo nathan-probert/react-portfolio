@@ -15,7 +15,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/hockeypicks" element={<HockeyPicks />} />
+                <Route path="/smartscore" element={<HockeyPicks />} />
 
                 <Route path="/wordle" element={<WordleClonePage />} />
             </Routes>
@@ -26,7 +26,8 @@ function App() {
 
 function WordleClonePage() {
     // Perform navigation to wordleclone.html
-    window.location.href = '/wordleclone';
+    window.location.href = '/wordleclone.html';
+    console.log("work");
 
     // Return null since this component doesn't render anything
     return null;

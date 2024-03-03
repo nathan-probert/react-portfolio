@@ -10,6 +10,11 @@
     color: var(--color-secondary);
 }
 
+.date {
+  text-align: center;
+  color: var(--color-secondary);
+}
+
 .sort-arrow {
     text-decoration: none !important;
     cursor: pointer;
