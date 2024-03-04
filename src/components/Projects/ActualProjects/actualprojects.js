@@ -84,10 +84,10 @@ const ActualProjects = () => {
                     <div className="overlay">
                         <h3>Portfolio Website</h3>
                         <div className="links">
-                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                            <a className="link" href="https://github.com/proby-8/react-portfolio">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
-                            <a className="link" href="/smartscore">
+                            <a className="link" href="/">
                                 <img src="assets/smallerLogo.png" alt="Could not load image" />
                             </a>
                         </div>
@@ -121,11 +121,11 @@ const ActualProjects = () => {
                     <div className="overlay">
                         <h3>Wordle Clone</h3>
                         <div className="links">
-                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                            <a className="link" href="https://github.com/proby-8/react-portfolio">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
                             <a className="link" href="/wordle">
-                                <img src="assets/smallerLogo.png" alt="Could not load image" />
+                                <img src="assets/wordle.png" alt="Could not load image" />
                             </a>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ const ActualProjects = () => {
                     <div className="overlay">
                         <h3>Wordle-Solver</h3>
                         <div className="links">
-                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                            <a className="link" href="https://github.com/proby-8/wordle-solver">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
                         </div>
@@ -185,7 +185,7 @@ const ActualProjects = () => {
                     <div className="overlay">
                         <h3>Imperial Capitalist</h3>
                         <div className="links">
-                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                            <a className="link" href="https://github.com/proby-8/ImperialCapitalist">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
                         </div>
@@ -219,7 +219,7 @@ const ActualProjects = () => {
                     <div className="overlay">
                         <h3>Mancala</h3>
                         <div className="links">
-                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                            <a className="link" href="https://github.com/proby-8/mancala">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
                         </div>
@@ -247,7 +247,7 @@ const ActualProjects = () => {
                     <div className="overlay">
                         <h3>Discord Bot</h3>
                         <div className="links">
-                            <a className="link" href="https://github.com/proby-8/tims-picker">
+                            <a className="link" href="https://github.com/proby-8/discord-music-bot">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
                         </div>
