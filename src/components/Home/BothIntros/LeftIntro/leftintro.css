@@ -27,6 +27,14 @@
     line-height: 175%;
 }
 
+.left-header .left-con .aboutMe a{
+    color: rgb(80, 161, 243);
+    text-decoration: underline;
+}
+.left-header .left-con .aboutMe a:hover{
+    color: var(--color-secondary);
+}
+
 @media screen and (max-width: 1600px) {
     .left-header .left-con .possible {
         font-size: 2rem;

@@ -41,7 +41,7 @@ const ActualProjects = () => {
                         </div>
                     </div>
                     <div className="overlay">
-                        <h3>ScoreSmart</h3>
+                        <h3>SmartScore</h3>
                         <div className="links">
                             <a className="link" href="https://github.com/proby-8/tims-picker">
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
@@ -88,7 +88,7 @@ const ActualProjects = () => {
                                 <img className="github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
                             </a>
                             <a className="link" href="/">
-                                <img src="assets/smallerLogo.png" alt="Could not load image" />
+                                <img className="myLogo" src="assets/logoTransparent.png" alt="Could not load image" />
                             </a>
                         </div>
                     </div>

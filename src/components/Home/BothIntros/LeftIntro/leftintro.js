@@ -52,6 +52,7 @@ const LeftIntro = () => {
                         data analytics 🔍, and web design 🌐, in particular using these
                         technologies to create cool new projects.
                     </p>
+                    <p className="aboutMe">Check out some of my projects <a className="link" href="/projects">here</a>!</p> 
                 </div>
             </div>
         </div>
