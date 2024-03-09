@@ -11,8 +11,12 @@ const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} className="arrowLeft" />;
 function App() {
   const [list, setList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortColumn, setSortColumn] = useState('Stat');
+
+  const [sortColumn, setSortColumn] = useState('Team');
   const [sortOrder, setSortOrder] = useState('desc');
+  const [sortColumn2, setSortColumn2] = useState('Stat');
+  const [sortOrder2, setSortOrder2] = useState('desc');
+
   const [date, setDate] = useState(''); // Declare date state
 
   const itemsPerPage = 25;
@@ -20,16 +24,46 @@ function App() {
   const sortComparator = (a, b) => {
     var aValue = a[sortColumn];
     var bValue = b[sortColumn];
+    var aValue2 = a[sortColumn2];
+    var bValue2 = b[sortColumn2];
 
     if (sortColumn === 'Bet') {
       aValue = parseFloat(aValue);
       bValue = parseFloat(bValue);
     }
+    if (sortColumn2 === 'Bet') {
+      aValue2 = parseFloat(aValue2);
+      bValue2 = parseFloat(bValue2);
+    }
 
     if (sortOrder === 'asc') {
-      return aValue > bValue ? 1 : -1;
+      if (sortOrder2 === 'asc') {
+        if (aValue == bValue) {
+          return aValue2 > bValue2 ? 1 : -1;
+        } else {
+          return aValue > bValue ? 1 : -1;
+        }
+      } else {
+        if (aValue == bValue) {
+          return aValue2 < bValue2 ? 1 : -1;
+        } else {
+          return aValue > bValue ? 1 : -1;
+        }
+      }
     } else {
-      return aValue < bValue ? 1 : -1;
+      if (sortOrder2 === 'asc') {
+        if (aValue == bValue) {
+          return aValue2 > bValue2 ? 1 : -1;
+        } else {
+          return aValue < bValue ? 1 : -1;
+        }
+      } else {
+        if (aValue == bValue) {
+          return aValue2 < bValue2 ? 1 : -1;
+        } else {
+          return aValue < bValue ? 1 : -1;
+        }
+      }    
     }
   };
 
