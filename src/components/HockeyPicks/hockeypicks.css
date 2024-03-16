@@ -16,8 +16,11 @@
 }
 
 .sort-arrow {
-    text-decoration: none !important;
-    cursor: pointer;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.secondary {
+  font-size: 1rem !important;
 }
 
 .backHome {

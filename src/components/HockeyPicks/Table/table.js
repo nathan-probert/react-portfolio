@@ -8,7 +8,7 @@ const booleanConvert = (number) => {
     return number === 0 ? 'Away' : 'Home';
 };
 
-const Table = ({ sortedItems, handleSort, renderSortArrow, indexOfFirstItem }) => {
+const Table = ({ sortedItems, renderSortArrow, indexOfFirstItem }) => {
   const renderTableRows = () => {
     return sortedItems.map((item, index) => {
       const placement = indexOfFirstItem + index + 1; // Calculate the placement
@@ -40,40 +40,40 @@ const Table = ({ sortedItems, handleSort, renderSortArrow, indexOfFirstItem }) =
           <th>
             <span className='header-text'></span>
           </th>
-          <th onClick={() => handleSort('Name')}>
+          <th>
             <span className='header-text'>Player Name</span> {renderSortArrow('Name')}
           </th>
-          <th onClick={() => handleSort('Team')}>
+          <th>
             <span className='header-text'>Team Name</span> {renderSortArrow('Team')}
           </th>
-          <th onClick={() => handleSort('Stat')}>
+          <th>
             <span className='header-text'>Probablity</span> {renderSortArrow('Stat')}
           </th>
-          <th onClick={() => handleSort('Bet')}>
+          <th>
             <span className='header-text'>Bet</span> {renderSortArrow('Bet')}
           </th>
-          <th onClick={() => handleSort('GPG')}>
+          <th>
             <span className='header-text'>GPG</span> {renderSortArrow('GPG')}
           </th>
-          <th onClick={() => handleSort('5GPG')}>
+          <th>
             <span className='header-text'>5GPG</span> {renderSortArrow('5GPG')}
           </th>
-          <th onClick={() => handleSort('HGPG')}>
+          <th>
             <span className='header-text'>HGPG</span> {renderSortArrow('HGPG')}
           </th>
-          <th onClick={() => handleSort('PPG')}>
+          <th>
             <span className='header-text'>HPPG</span> {renderSortArrow('PPG')}
           </th>
-          <th onClick={() => handleSort('OTPM')}>
+          <th>
             <span className='header-text'>OTPM</span> {renderSortArrow('OTPM')}
           </th>
-          <th onClick={() => handleSort('TGPG')}>
+          <th>
             <span className='header-text'>TGPG</span> {renderSortArrow('TGPG')}
           </th>
-          <th onClick={() => handleSort('OTGA')}>
+          <th>
             <span className='header-text'>OTGA</span> {renderSortArrow('OTGA')}
           </th>
-          <th onClick={() => handleSort('Home_1')}>
+          <th>
             <span className='header-text'>Location</span> {renderSortArrow('Home_1')}
           </th>
         </tr>

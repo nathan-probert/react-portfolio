@@ -193,31 +193,31 @@
 //         <tbody className='body'>{renderTableRows()}</tbody>
 //       </table>
 
-//       <div className='pagination'>
-//         {pageNumbers.map((number, index) => {
-//           if (index===currentPage-1) {
-//             return (
-//               <button className='active' key={number} onClick={() => handlePageChange(number)}>
-//                 {number}
-//               </button>
-//             );
-//           } else if (index === 0 || index === pageNumbers.length - 1 || (index >= currentPage - 3 && index <= currentPage + 1)) {
-//             return (
-//               <button key={number} onClick={() => handlePageChange(number)}>
-//                 {number}
-//               </button>
-//             );
-//           } else if (index === currentPage + 3 || index === currentPage - 4) {
-//             return (
-//               <span key={index} className='ellipsis'>
-//                 ...
-//               </span>
-//             );
-//           }
-//           return null;
-//         })}
-//         <button onClick={handleNextPage}>Next</button>
-//       </div>
+// <div className='pagination'>
+//   {pageNumbers.map((number, index) => {
+//     if (index===currentPage-1) {
+//       return (
+//         <button className='active' key={number} onClick={() => handlePageChange(number)}>
+//           {number}
+//         </button>
+//       );
+//     } else if (index === 0 || index === pageNumbers.length - 1 || (index >= currentPage - 3 && index <= currentPage + 1)) {
+//       return (
+//         <button key={number} onClick={() => handlePageChange(number)}>
+//           {number}
+//         </button>
+//       );
+//     } else if (index === currentPage + 3 || index === currentPage - 4) {
+//       return (
+//         <span key={index} className='ellipsis'>
+//           ...
+//         </span>
+//       );
+//     }
+//     return null;
+//   })}
+//   <button onClick={handleNextPage}>Next</button>
+// </div>
 //       <a href="/projects" class="backHome">
 //             <div class="btn">
 //                 {arrowLeft}
@@ -233,7 +233,10 @@
 
 import React, { useState, useEffect } from 'react';
 import './hockeypicks.css';
+
 import Table from './Table/table';
+import PageNav from './PageNav/pagenav';
+import Filter from './Filter/filter';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -246,8 +249,8 @@ function App() {
   const [list, setList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const [sortColumn, setSortColumn] = useState('Team');
-  const [sortOrder, setSortOrder] = useState('desc');
+  const [sortColumn1, setSortColumn1] = useState('Team');
+  const [sortOrder1, setSortOrder1] = useState('desc');
   const [sortColumn2, setSortColumn2] = useState('Stat');
   const [sortOrder2, setSortOrder2] = useState('desc');
 
@@ -256,46 +259,46 @@ function App() {
   const itemsPerPage = 25;
 
   const sortComparator = (a, b) => {
-    var aValue = a[sortColumn];
-    var bValue = b[sortColumn];
+    var aValue1 = a[sortColumn1];
+    var bValue1 = b[sortColumn1];
     var aValue2 = a[sortColumn2];
     var bValue2 = b[sortColumn2];
 
-    if (sortColumn === 'Bet') {
-      aValue = parseFloat(aValue);
-      bValue = parseFloat(bValue);
+    if (sortColumn1 === 'Bet') {
+      aValue1 = parseFloat(aValue1);
+      bValue1 = parseFloat(bValue1);
     }
     if (sortColumn2 === 'Bet') {
       aValue2 = parseFloat(aValue2);
       bValue2 = parseFloat(bValue2);
     }
 
-    if (sortOrder === 'asc') {
+    if (sortOrder1 === 'asc') {
       if (sortOrder2 === 'asc') {
-        if (aValue == bValue) {
+        if (aValue1 == bValue1) {
           return aValue2 > bValue2 ? 1 : -1;
         } else {
-          return aValue > bValue ? 1 : -1;
+          return aValue1 > bValue1 ? 1 : -1;
         }
       } else {
-        if (aValue == bValue) {
+        if (aValue1 == bValue1) {
           return aValue2 < bValue2 ? 1 : -1;
         } else {
-          return aValue > bValue ? 1 : -1;
+          return aValue1 > bValue1 ? 1 : -1;
         }
       }
     } else {
       if (sortOrder2 === 'asc') {
-        if (aValue == bValue) {
+        if (aValue1 == bValue1) {
           return aValue2 > bValue2 ? 1 : -1;
         } else {
-          return aValue < bValue ? 1 : -1;
+          return aValue1 < bValue1 ? 1 : -1;
         }
       } else {
-        if (aValue == bValue) {
+        if (aValue1 == bValue1) {
           return aValue2 < bValue2 ? 1 : -1;
         } else {
-          return aValue < bValue ? 1 : -1;
+          return aValue1 < bValue1 ? 1 : -1;
         }
       }    
     }
@@ -314,31 +317,21 @@ function App() {
       document.title = 'Nathan Probert | SmartScore';
   }, []);
 
-  const sortedList = [...list].sort(sortComparator);
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = sortedList.slice(indexOfFirstItem, indexOfLastItem);
-
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
 
-  const handleNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
-  };
-
-  const handleSort = (column) => {
-    if (sortColumn == column) {
-      setSortOrder((prevOrder) => (prevOrder === 'asc' ? 'desc' : 'asc'));
-    } else {
-      setSortOrder('desc')
-    }
-    setSortColumn(column);
-  };
+  const sortedList = [...list].sort(sortComparator);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = sortedList.slice(indexOfFirstItem, indexOfLastItem);
+  const pageNum = Array.from({ length: Math.ceil(list.length / itemsPerPage) }, (_, index) => index + 1);
 
   const renderSortArrow = (column) => {
-    if (sortColumn === column) {
-      return <span className='sort-arrow'>{sortOrder === 'asc' ? '↑' : '↓'}</span>;
+    if (sortColumn1 === column) {
+      return <span className='primary sort-arrow'>{sortOrder1 === 'asc' ? '↑' : '↓'}</span>;
+    } else if (sortColumn2 === column) {
+      return <span className='secondary sort-arrow'>{sortOrder2 === 'asc' ? '↑' : '↓'}</span>;
     }
     return null;
   };
@@ -347,37 +340,30 @@ function App() {
     <div className='container'>
       <h1 className='title'>SmartScore</h1>
       <h3 className='date'>{date}</h3>
+
+      <Filter
+        sort1Cat={sortColumn1}
+        sort1Col={setSortColumn1}
+        sort1Dir={sortOrder1}
+        sort1DirChange={setSortOrder1}
+        sort2Cat={sortColumn2}
+        sort2Col={setSortColumn2}
+        sort2Dir={sortOrder2}
+        sort2DirChange={setSortOrder2}
+      />
+
       <Table 
         sortedItems={currentItems}
-        handleSort={handleSort}
         renderSortArrow={renderSortArrow}
         indexOfFirstItem={indexOfFirstItem}
       />
-      {/* <div className='pagination'>
-        {pageNumbers.map((number, index) => {
-          if (index===currentPage-1) {
-            return (
-              <button className='active' key={number} onClick={() => handlePageChange(number)}>
-                {number}
-              </button>
-            );
-          } else if (index === 0 || index === pageNumbers.length - 1 || (index >= currentPage - 3 && index <= currentPage + 1)) {
-            return (
-              <button key={number} onClick={() => handlePageChange(number)}>
-                {number}
-              </button>
-            );
-          } else if (index === currentPage + 3 || index === currentPage - 4) {
-            return (
-              <span key={index} className='ellipsis'>
-                ...
-              </span>
-            );
-          }
-          return null;
-        })}
-        <button onClick={handleNextPage}>Next</button>
-      </div> */}
+
+      <PageNav
+        currentPage={currentPage}
+        pageNumbers={pageNum}
+        setPageFunc={handlePageChange}
+      />
+
       <a href="/projects" className="backHome">
             <div className="btn">
                 {arrowLeft}
