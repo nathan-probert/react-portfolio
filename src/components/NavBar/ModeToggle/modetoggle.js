@@ -31,10 +31,10 @@ const ModeToggle = () => {
         <div>
             <div className="toggle" id="switcher" onClick={toggle}>
                 <div className="moon">
-                    <h5 className="icon">{moon}</h5>
+                    <h5 className="icon">{sun}</h5>
                 </div>
                 <div className="sun">
-                    <h5 className="icon">{sun}</h5>
+                    <h5 className="icon">{moon}</h5>
                 </div>
             </div>
         </div>
