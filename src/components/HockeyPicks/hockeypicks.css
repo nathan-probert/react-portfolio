@@ -15,6 +15,13 @@
   color: var(--color-secondary);
 }
 
+.timsTitle {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
 .sort-arrow {
   text-decoration: none !important;
   cursor: pointer;
@@ -59,6 +66,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin: auto;
   }
   
   .header {

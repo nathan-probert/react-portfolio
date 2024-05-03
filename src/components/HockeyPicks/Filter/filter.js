@@ -2,8 +2,6 @@ import React from 'react';
 
 const Filter = ({ sort1Cat, sort1Col, sort1Dir, sort1DirChange, sort2Cat, sort2Col, sort2Dir, sort2DirChange }) => {
 
-    console.log(sort1Cat);
-
     const allValues = [
         { label: 'Player Name', value: 'Name' },
         { label: 'Team Name', value: 'Team' },

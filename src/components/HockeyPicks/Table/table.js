@@ -8,7 +8,7 @@ const booleanConvert = (number) => {
     return number === 0 ? 'Away' : 'Home';
 };
 
-const Table = ({ sortedItems, renderSortArrow, indexOfFirstItem }) => {
+const Table = ({ sortedItems, renderSortArrow, indexOfFirstItem, handleSortChange }) => {
   const renderTableRows = () => {
     return sortedItems.map((item, index) => {
       const placement = indexOfFirstItem + index + 1; // Calculate the placement
@@ -41,37 +41,37 @@ const Table = ({ sortedItems, renderSortArrow, indexOfFirstItem }) => {
             <span className='header-text'></span>
           </th>
           <th>
-            <span className='header-text'>Player Name</span> {renderSortArrow('Name')}
+            <span className='header-text' onClick={() => handleSortChange('Name')}>Player Name</span> {renderSortArrow('Name')}
           </th>
           <th>
-            <span className='header-text'>Team Name</span> {renderSortArrow('Team')}
+            <span className='header-text' onClick={() => handleSortChange('Team')}>Team Name</span> {renderSortArrow('Team')}
           </th>
           <th>
-            <span className='header-text'>Probablity</span> {renderSortArrow('Stat')}
+            <span className='header-text' onClick={() => handleSortChange('Stat')}>Probablity</span> {renderSortArrow('Stat')}
           </th>
           <th>
-            <span className='header-text'>Bet</span> {renderSortArrow('Bet')}
+            <span className='header-text' onClick={() => handleSortChange('Bet')}>Bet</span> {renderSortArrow('Bet')}
           </th>
           <th>
-            <span className='header-text'>GPG</span> {renderSortArrow('GPG')}
+            <span className='header-text' onClick={() => handleSortChange('GPG')}>GPG</span> {renderSortArrow('GPG')}
           </th>
           <th>
-            <span className='header-text'>5GPG</span> {renderSortArrow('5GPG')}
+            <span className='header-text' onClick={() => handleSortChange('5GPG')}>5GPG</span> {renderSortArrow('5GPG')}
           </th>
           <th>
-            <span className='header-text'>HGPG</span> {renderSortArrow('HGPG')}
+            <span className='header-text' onClick={() => handleSortChange('HGPG')}>HGPG</span> {renderSortArrow('HGPG')}
           </th>
           <th>
-            <span className='header-text'>HPPG</span> {renderSortArrow('PPG')}
+            <span className='header-text' onClick={() => handleSortChange('PPG')}>HPPG</span> {renderSortArrow('PPG')}
           </th>
           <th>
-            <span className='header-text'>OTPM</span> {renderSortArrow('OTPM')}
+            <span className='header-text' onClick={() => handleSortChange('OTPM')}>OTPM</span> {renderSortArrow('OTPM')}
           </th>
           <th>
-            <span className='header-text'>TGPG</span> {renderSortArrow('TGPG')}
+            <span className='header-text' onClick={() => handleSortChange('TGPG')}>TGPG</span> {renderSortArrow('TGPG')}
           </th>
           <th>
-            <span className='header-text'>OTGA</span> {renderSortArrow('OTGA')}
+            <span className='header-text' onClick={() => handleSortChange('OTGA')}>OTGA</span> {renderSortArrow('OTGA')}
           </th>
           <th>
             <span className='header-text'>Location</span> {renderSortArrow('Home_1')}
