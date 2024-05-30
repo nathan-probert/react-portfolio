@@ -63,90 +63,98 @@
 }
 
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin: auto;
-  }
-  
-  .header {
-    background-color: var(--color-primary);
-    font-weight: bold;
-    font-size: larger;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin: auto;
+}
 
-  .header-text {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  .body tr:nth-child(even) {
-    background-color: var(--project-back-grey);
-  }
-  
-  .body tr:hover {
-    background-color: #5f5f5f;
-  }
-  
-  td, th {
-    padding: 10px;
-    border: 1px solid var(--color-white);
-    text-align: center;
-  }
-  
-  /* Custom styling for individual columns */
-  .name {
-    font-weight: bold;
-    padding-right: 0;
-  }
+.header {
+  background-color: var(--color-primary);
+  font-weight: bold;
+  font-size: larger;
+}
 
-  .teamName {
-    color: #357dc9; /* blue color */
-  }
-  
-  .bet {
-    font-style: italic;
-  }
-  
-  .stat {
-    color: #10812a; /* green color */
-    font-weight: bold;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    padding: 8px 12px;
-    margin: 0 5px;
-    border: 1px solid #3498db;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    cursor: pointer;
-  }
+.header-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-  .active {
-    background-color: #2077b3 !important; 
+.body tr:nth-child(even) {
+  background-color: var(--project-back-grey);
+}
+
+.body tr:hover {
+  background-color: #5f5f5f;
+}
+
+td, th {
+  padding: 10px;
+  border: 1px solid var(--color-white);
+  text-align: center;
+}
+
+/* Custom styling for individual columns */
+.name {
+  font-weight: bold;
+  padding-right: 0;
+}
+
+.teamName {
+  color: #357dc9; /* blue color */
+}
+
+.bet {
+  font-style: italic;
+}
+
+.stat {
+  color: #10812a; /* green color */
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #2077b3 !important; 
+}
+
+.pagination button:hover {
+  background-color: #2077b3;
+}
+
+.pagination button:last-child {
+  background-color: #2ecc71;
+  border: 1px solid #2ecc71;
+}
+
+.pagination button:last-child:hover {
+  background-color: #1a9851;
+}
+
+.pagination .ellipsis {
+  margin: 0 5px;
+  color: #777;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .teamName, .bet, .gpg, .fiveGpg, .hgpg, .ppg, .otpm, .tgpg, .otga, .isHome, 
+  th.teamName, th.bet, th.gpg, th.fiveGpg, th.hgpg, th.ppg, th.otpm, th.tgpg, th.otga, th.home {
+      display: none;
   }
-  
-  .pagination button:hover {
-    background-color: #2077b3;
-  }
-  
-  .pagination button:last-child {
-    background-color: #2ecc71;
-    border: 1px solid #2ecc71;
-  }
-  
-  .pagination button:last-child:hover {
-    background-color: #1a9851;
-  }
-  
-  .pagination .ellipsis {
-    margin: 0 5px;
-    color: #777;
-  }
+}
