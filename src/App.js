@@ -5,6 +5,8 @@ import Projects from "./components/Projects/projects";
 import Contact from "./components/Contact/contact";
 import HockeyPicks from "./components/HockeyPicks/hockeypicks";
 
+import Reports from "./components/Reports/reports";
+
 import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
                 <Route path="/smartscore" element={<HockeyPicks />} />
 
                 <Route path="/wordle" element={<WordleClonePage />} />
+
+                <Route path="/experience" element={<Reports />} />
             </Routes>
             <Navbar />
         </div>
