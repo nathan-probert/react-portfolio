@@ -61,7 +61,7 @@ const S24Evertz = () => {
           <h2 className="section-title">Acknowledgements</h2>
           <p className="content">
             &emsp;I would like to express my gratitude to the team at Evertz Microsystems for providing me with the opportunity, and all members of my team, who were very helpful and forthcoming. I'd like to specifically thank Stephen Hazra and Abu Saeed for their mentorship and guidance throughout my work term.<br /><br />
-            I could not have asked for a better team to work with, and I am grateful for the experience and knowledge I gained during my time at Evertz! 
+            &emsp;I could not have asked for a better team to work with, and I am grateful for the experience and knowledge I gained during my time at Evertz! 
           </p>
         </section>
         <img className="coop-image" src="assets/evertz-building.jpg" alt="Could not load image" />
