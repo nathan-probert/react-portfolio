@@ -17,7 +17,7 @@ const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} className="arrowLeft" />;
 const getSortComparator = (sortColumn1, sortOrder1) => {
   return (a, b) => {
     const parseValue = (value, column) => {
-      return column === 'Bet' ? parseFloat(value) : value;
+      return column === 'bet' ? parseFloat(value) : value;
     };
   
     const compareValues = (valueA, valueB, sortOrder) => {
@@ -52,7 +52,7 @@ const getSortComparator = (sortColumn1, sortOrder1) => {
 };
 
 function App() {
-  const [sortColumn1, setSortColumn1] = useState('Stat');
+  const [sortColumn1, setSortColumn1] = useState('stat');
   const [sortOrder1, setSortOrder1] = useState('desc');
   const [timsGroups, setTims] = useState(0);
   const [currentItems, setCurrentItems] = useState([]);
@@ -62,13 +62,13 @@ function App() {
   
   // get the data from my api
   useEffect(() => {
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:Cmz3Gtkc/export')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:OvqrJ0Ps/players')
       .then((response) => response.json())
       .then((data) => {
-        setDate(data[0]?.Date || '');
+        setDate(data[0].data);
         setList(data);
       })
-      .catch((error) => console.error('Error fetching list:', error));
+    .catch((error) => console.error('Error fetching list:', error));
   
     document.title = 'Nathan Probert | SmartScore';
   }, [setDate, setList]);
@@ -125,21 +125,21 @@ function App() {
         <div>
           <h3 className='timsTitle'>Group 1</h3>
           <Table 
-            sortedItems={currentItems.filter(item => item.onTims === 1)}
+            sortedItems={currentItems.filter(item => item.tims === 1)}
             renderSortArrow={renderSortArrow}
             indexOfFirstItem={0}
             handleSortChange={handleSortChange}
           />      
           <h3 className='timsTitle'>Group 2</h3>  
           <Table 
-            sortedItems={currentItems.filter(item => item.onTims === 2)}
+            sortedItems={currentItems.filter(item => item.tims === 2)}
             renderSortArrow={renderSortArrow}
             indexOfFirstItem={0}
             handleSortChange={handleSortChange}
           />
           <h3 className='timsTitle'>Group 3</h3> 
           <Table 
-            sortedItems={currentItems.filter(item => item.onTims === 3)}
+            sortedItems={currentItems.filter(item => item.tims === 3)}
             renderSortArrow={renderSortArrow}
             indexOfFirstItem={0}
             handleSortChange={handleSortChange}
